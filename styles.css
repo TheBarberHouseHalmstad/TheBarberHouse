@@ -17,11 +17,20 @@ header {
 
 header h1 {
     margin: 0;
+    padding: 5px 10px; /* Add padding around each menu item */
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    justify-content: center; /* Center all items */
+    align-items: center; /* Ensure vertical alignment */
+    display: flex; /* Arrange items horizontally */
+    gap: 20px; /* Add space between items */
+    border-top: 1px solid #555; /* Thin line above the menu */
+    border-bottom: 1px solid #555; /* Thin line below the menu */
+    padding: 10px 0; /* Spacing around menu items */
 }
 
 nav ul li {
@@ -32,6 +41,13 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth transitions for hover effects */
+}
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+    border-bottom: 2px solid #ffcc00; /* Underline effect on hover */
 }
 
 .tab-content {
@@ -105,8 +121,7 @@ body {
 .sidebar {
     width: 300px; /* Adjust width as needed */
     padding: 20px;
-    background-color: #f8f9fa;
-    border-right: 1px solid #dee2e6;
+  
 }
 
 .main-content {
@@ -118,9 +133,7 @@ body {
     position: sticky;
     top: 0;
     padding: 1rem;
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 0.5rem;
+    box-shadow: 2px 1px 1px rgb(139, 138, 138);
 }
 
     .custom-icon {
@@ -136,3 +149,24 @@ body {
         border-radius: 25px; /* Makes buttons rounded */
         font-weight: 600;    /* Ensures buttons are bold */
     }    
+    .opening-hours {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 5px; /* Add space between items */
+    }
+    
+    .opening-hours li {
+        display: flex; /* Align items in a row */
+        justify-content: flex-start; /* Ensure left alignment */
+        gap: 10px; /* Space between day and time */
+    }
+    
+    .opening-hours .day {
+        width: 50px; /* Fixed width for day names */
+        font-weight: bold; /* Emphasize day names */
+    }
+    
+    .opening-hours .time {
+        flex-grow: 1; /* Allow times to adjust dynamically */
+    }
+    

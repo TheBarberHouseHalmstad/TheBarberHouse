@@ -114,20 +114,45 @@ body {
     min-height: 100vh;
 }
 
+/* Default layout for larger screens */
 .d-flex {
     display: flex;
+    flex-direction: row; /* Sidebar and content side-by-side */
 }
 
 .sidebar {
-    width: 300px; /* Adjust width as needed */
+    width: 300px; /* Keep sidebar width for larger screens */
     padding: 20px;
-  
 }
 
 .main-content {
+    flex-grow: 1; /* Main content takes remaining space */
     padding: 20px;
-    flex-grow: 1;
 }
+
+/* Mobile layout: stack sidebar below content */
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        padding: 10px;
+        order: 1; /* Sidebar appears after the main content */
+    }
+
+    .main-content {
+        order: 0; /* Main content appears first */
+        padding: 10px;
+    }
+
+    .sticky {
+        position: static; /* Remove sticky behavior for smaller screens */
+        box-shadow: none; /* Simplify design for mobile */
+    }
+}
+
 
 .sticky {
     position: sticky;
@@ -150,23 +175,22 @@ body {
         font-weight: 600;    /* Ensures buttons are bold */
     }    
     .opening-hours {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        gap: 5px; /* Add space between items */
-    }
-    
-    .opening-hours li {
-        display: flex; /* Align items in a row */
-        justify-content: flex-start; /* Ensure left alignment */
-        gap: 10px; /* Space between day and time */
-    }
-    
-    .opening-hours .day {
-        width: 50px; /* Fixed width for day names */
-        font-weight: bold; /* Emphasize day names */
-    }
-    
-    .opening-hours .time {
-        flex-grow: 1; /* Allow times to adjust dynamically */
-    }
-    
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 5px; /* Add space between items */
+}
+
+.opening-hours li {
+    display: flex; /* Align items in a row */
+    justify-content: flex-start; /* Ensure left alignment */
+    gap: 10px; /* Space between day and time */
+}
+
+.opening-hours .day {
+    width: 50px; /* Fixed width for day names */
+    font-weight: bold; /* Emphasize day names */
+}
+
+.opening-hours .time {
+    flex-grow: 1; /* Allow times to adjust dynamically */
+}

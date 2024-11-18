@@ -151,6 +151,39 @@ body {
         position: static; /* Remove sticky behavior for smaller screens */
         box-shadow: none; /* Simplify design for mobile */
     }
+   
+}
+.table {
+    width: 100%; /* Ensure the table always fits within the container */
+    border-collapse: collapse; /* Remove extra spacing between table cells */
+}
+
+.table th,
+.table td {
+    padding: 10px; /* Default padding for desktop screens */
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1rem; /* Default font size */
+}
+
+.table th {
+    background-color: #f8f9fa; /* Optional: make headers stand out */
+}
+
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        padding: 5px; /* Reduce padding for smaller screens */
+        font-size: 0.9rem; /* Shrink font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .table th,
+    .table td {
+        padding: 3px; /* Further reduce padding for very small screens */
+        font-size: 0.8rem; /* Further shrink font size */
+    }
 }
 
 

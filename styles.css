@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.image-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-card {
+    width: 400px;
+    margin: 10px;
+    text-align: center;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 5px 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.sidebar {
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+}
+
+    .custom-icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+    body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600; /* Makes the text bold */
+    }
+    button, .btn {
+        border-radius: 25px; /* Makes buttons rounded */
+        font-weight: 600;    /* Ensures buttons are bold */
+    }    

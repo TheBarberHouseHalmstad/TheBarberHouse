@@ -91,13 +91,49 @@ button:hover {
 footer {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px 0;
+    padding: 10px 20px;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    margin-top: auto;
-
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text and icons */
+    font-size: 14px;
+    height: 30px;
 }
+
+.footer-content {
+    display: flex;
+    align-items: center; /* Aligns text and icons in the same line */
+    gap: 10px; /* Space between text and icons */
+}
+
+.social-links {
+    display: flex;
+    align-items: center; /* Aligns icons in the same line */
+    gap: 10px; /* Space between icons */
+    margin-top: 5px; /* Adds a small gap between text and icons */
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fffcfc;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Adjust this for the hover effect */
+}
+
+footer p {
+    margin: 0; /* Removes unnecessary margin from the text */
+}
+
+
 
 ul {
     list-style: none;
@@ -112,6 +148,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-bottom: 120px; /* Adjust this value based on the footer's height */
 }
 
 /* Default layout for larger screens */
@@ -122,7 +159,7 @@ body {
 
 .sidebar {
     width: 300px; /* Keep sidebar width for larger screens */
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .main-content {
